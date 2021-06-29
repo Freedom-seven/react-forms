@@ -111,7 +111,7 @@ class App extends Component {
               type="number"
               value={this.state.phoneNumber}
               onChange={this.handleChange}
-              placeholder={0000-000-000}
+              placeholder={"0000-000-000"}
             />
           </label>
           <br /> <br/>
