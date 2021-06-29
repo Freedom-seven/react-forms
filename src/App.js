@@ -68,9 +68,10 @@ class App extends Component {
               placeholder={this.props.email}
             />
           </label>
-          <br /> <br/>
+          <br />
           <div>
             <label className="classLabel">Gender:</label>
+            <br/>
             <label>
               <input
                 type="radio"
@@ -80,9 +81,7 @@ class App extends Component {
               />
               Male
             </label>
-          </div>
 
-          <div className="form-check">
             <label>
               <input
                 type="radio"
@@ -92,9 +91,6 @@ class App extends Component {
               />
               Female
             </label>
-          </div>
-
-          <div className="form-check">
             <label>
               <input
                 type="radio"
@@ -105,7 +101,6 @@ class App extends Component {
               Other
             </label>
           </div>
-          <br />
           <label className="classLabel">
             {" "}
             <br />
