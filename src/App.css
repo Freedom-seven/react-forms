@@ -25,11 +25,14 @@
  font-weight: bolder;
  padding: 5px;
  background-color: teal;
+ border-radius: 5px;
 }
 
 .classSubmit:hover {
   background-color: black;
   color: aliceblue;
+  margin-right: 10px;
+  transition: margin-right all;
 }
 
 .form-check {
