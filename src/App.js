@@ -39,7 +39,7 @@ class App extends Component {
               type="text"
               value={this.state.firstName}
               onChange={this.handleChange}
-              placeholder={this.props.firstname}
+              placeholder={"Jane"}
             />
           </label>
           <br />
@@ -51,7 +51,7 @@ class App extends Component {
               type="text"
               value={this.state.lastName}
               onChange={this.handleChange}
-              placeholder={this.props.lastname}
+              placeholder={"Doe"}
             />
           </label>
           <br />
@@ -65,7 +65,7 @@ class App extends Component {
               type="text"
               value={this.state.email}
               onChange={this.handleChange}
-              placeholder={this.props.email}
+              placeholder={"example@form.com"}
             />
           </label>
           <br />
@@ -111,7 +111,7 @@ class App extends Component {
               type="number"
               value={this.state.phoneNumber}
               onChange={this.handleChange}
-              placeholder={this.props.phonenumber}
+              placeholder={0000-000-000}
             />
           </label>
           <br /> <br/>
