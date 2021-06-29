@@ -70,7 +70,7 @@ class App extends Component {
           </label>
           <br /> <br/>
           <div>
-            Gender: <br/>
+            <label className="classLabel">Gender:</label>
             <label>
               <input
                 type="radio"
