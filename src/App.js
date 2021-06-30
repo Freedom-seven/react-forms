@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './App.css'
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class App extends Component {
       lastName: "",
       email: "",
       gender: "",
-      phoneNumber: "",
+      phoneNumber: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -17,14 +17,23 @@ class App extends Component {
   }
 
   handleChange(e) {
-    const value = e.target.value;
     const name = e.target.name;
+    const value = e.target.value;
 
     this.setState({ [name]: value });
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.state);
+
+    this.setState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      gender: "",
+      phoneNumber: ""
+    })
   }
 
   render() {
@@ -62,7 +71,7 @@ class App extends Component {
             <input
               className="classInput"
               name="email"
-              type="text"
+              type="email"
               value={this.state.email}
               onChange={this.handleChange}
               placeholder={"example@form.com"}
@@ -70,41 +79,23 @@ class App extends Component {
           </label>
           <br />
           <div>
-            <label className="classLabel">Gender:</label>
-            <br/>
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                value={this.state.gender}
-                onChange={this.handleChange}
-              />
-              Male
+            <label
+              className="classLabel"
+            >
+              Gender:
             </label>
-
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                value={this.state.gender}
-                onChange={this.handleChange}
-              />
-              Female
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                value={this.state.gender}
-                onChange={this.handleChange}
-              />
-              Other
-            </label>
+            <br />
+            <select onChange={this.handleChange}
+              value={this.state.gender}>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Others</option>
+            </select>
           </div>
           <label className="classLabel">
             {" "}
             <br />
-            phone Number <br />
+            Phone Number <br />
             <input
               className="classInput"
               name="phoneNumber"
@@ -114,7 +105,7 @@ class App extends Component {
               placeholder={"0000-000-000"}
             />
           </label>
-          <br /> <br/>
+          <br /> <br />
           <input className="classSubmit" type="submit" value="Submit" />
         </form>
       </div>
